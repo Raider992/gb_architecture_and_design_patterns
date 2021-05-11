@@ -1,13 +1,14 @@
 from satou_framework.templator import render
 
-class Main:
+
+class Index:
     def __call__(self, request):
-        return '200 OK', render('main.html', data=request.get('data', None))
+        return '200 OK', render('index.html', data=request.get('data', None))
 
 
-class Other:
+class About:
     def __call__(self, request):
-        return '200 OK', render('other.html')
+        return '200 OK', render('about.html')
 
 
 class NotFound404:
